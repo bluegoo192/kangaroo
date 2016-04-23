@@ -1,0 +1,23 @@
+extends loggedin_layout
+
+block socketscript
+  script(type='text/javascript').
+    var socket = io();
+    function signOn() {
+      socket.emit('sign on', 'user signed on');
+    }
+
+block content
+  //h1= title
+  //p Welcome to #{title}
+  iframe(frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=13&center=34.4133%2C-119.8610&key=AIzaSyC4n4ugHmuj0TOFLQDnmeNV4N1c-s_NRWg" allowfullscreen)
+        
+  #sign-on
+    h2.center Sign on as deliverator
+    p Deliverators pick up and transport items for other users.
+        
+  footer
+    div
+      a(href="#") Order
+    div
+      a(href="#" onclick="signOn()") Sign on

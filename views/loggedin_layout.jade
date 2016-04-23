@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|Raleway:400,200,300' rel='stylesheet' type='text/css')
+    link(rel='stylesheet', href='/stylesheets/general_styles.css')
+    link(rel='stylesheet', href='/stylesheets/loggedin_styles.css')
+    script(src="/socket.io/socket.io.js")
+    block socketscript
+      
+
+  body(ng-app="Kangaroo")
+    #navbar
+      ul
+        li
+          a(href="/")= username
+      ul
+        li 
+          a(href="/account") Account
+        li 
+          a(href="#") Settings
+    block content

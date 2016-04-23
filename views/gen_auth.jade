@@ -1,0 +1,18 @@
+extends start_layout
+
+block content
+  a#homelink(href='/') Kangaroo
+  .flex-container.center
+    article
+      h2 Sign Up
+      form(action='/signup', method='POST')
+        input(type='text' name='username' placeholder='username' required autofocus)
+        input(type='text' name='email' placeholder='email' required)
+        input(type='password' name='password' placeholder='password' required)
+        button(type='submit') Sign up
+    article
+      h2 Log in
+      form(action='/login', method='POST')
+        input(type='text' name='username' placeholder='username' required autofocus)
+        input(type='password' name='password' placeholder='password' required)
+        button(type='submit') Log in
